@@ -1,0 +1,165 @@
+#(IF-ELSE)
+#Program1
+num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print(f"{num} is even.")
+else:
+    print(f"{num} is odd.")
+
+#program2
+age = int(input("Enter your age: "))
+if age >= 18:
+    print("You are eligible to vote.")
+else:
+    print("You are not eligible to vote yet. Wait until you turn 18.")
+
+
+
+#(LISTS)
+#program1
+numbers = [int(x) for x in input("Enter a list of numbers separated by space: ").split()]
+sum_of_numbers = sum(numbers)
+average = sum_of_numbers / len(numbers)
+print(f"Sum of the numbers: {sum_of_numbers}")
+print(f"Average of the numbers: {average}")
+
+#program2
+numbers = [int(x) for x in input("Enter a list of numbers separated by space: ").split()]
+even_numbers = [num for num in numbers if num % 2 == 0]
+print(f"Original list: {numbers}")
+print(f"Even numbers: {even_numbers}")
+
+
+
+#(TUPLES)
+#program1
+tuple1 = tuple(input("Enter elements for the first tuple separated by space: ").split())
+tuple2 = tuple(input("Enter elements for the second tuple separated by space: ").split())
+result_tuple = tuple1 + tuple2
+print(f"First tuple: {tuple1}")
+print(f"Second tuple: {tuple2}")
+print(f"Concatenated tuple: {result_tuple}")
+
+#program2
+numbers = tuple(map(int, input("Enter elements for the tuple separated by space: ").split()))
+max_number = max(numbers)
+min_number = min(numbers)
+print(f"Original tuple: {numbers}")
+print(f"Maximum element: {max_number}")
+print(f"Minimum element: {min_number}")
+
+
+
+#(DICTIONARIES)
+#program1
+student_info = {'name': 'John', 'age': 20, 'grade': 'A'}
+print(f"Student Name: {student_info['name']}")
+print(f"Student Age: {student_info['age']}")
+print(f"Student Grade: {student_info['grade']}")
+
+#program2
+car_details = {'brand': 'Toyota', 'model': 'Camry', 'year': 2020}
+print("Original Car Details:")
+for key, value in car_details.items():
+    print(f"{key}: {value}")
+car_details['year'] = 2022
+car_details['color'] = 'Blue'
+print("\nUpdated Car Details:")
+for key, value in car_details.items():
+    print(f"{key}: {value}")
+
+
+
+#(STRINGS)
+#program1
+input_string = input("Enter a string: ")
+char_to_count = input("Enter a character to count: ")
+count = input_string.count(char_to_count)
+print(f"The character '{char_to_count}' appears {count} times in the string.")
+
+#program2
+input_string = input("Enter a string: ")
+reversed_string = input_string[::-1]
+print(f"Original string: {input_string}")
+print(f"Reversed string: {reversed_string}")
+
+
+
+#(FOR LOOP)
+#program1
+numbers = [1, 2, 3, 4, 5]
+print("Elements of the list:")
+for num in numbers:
+    print(num)
+
+#program2
+limit = int(input("Enter a limit: "))
+sum_of_numbers = 0
+for i in range(1, limit + 1):
+    sum_of_numbers += i
+print(f"The sum of numbers up to {limit} is: {sum_of_numbers}")
+
+
+
+#(WHILE LOOP)
+#program1
+limit = int(input("Enter a limit: "))
+counter = 1
+print("Numbers from 1 to", limit, ":")
+while counter <= limit:
+    print(counter, end=" ")
+    counter += 1
+
+#program2
+number = int(input("Enter a number: "))
+factorial = 1
+temp_number = number
+while temp_number > 0:
+    factorial *= temp_number
+    temp_number -= 1
+print(f"The factorial of {number} is: {factorial}")
+
+
+
+#(FUNCTIONS)
+#program1
+def calculate_rectangle_area(length, width):
+    area = length * width
+    return area
+length = float(input("Enter the length of the rectangle: "))
+width = float(input("Enter the width of the rectangle: "))
+
+area_of_rectangle = calculate_rectangle_area(length, width)
+print(f"The area of the rectangle is: {area_of_rectangle}")
+
+#program2
+def is_prime(number):
+    if number <= 1:
+        return False
+    for i in range(2, int(number**0.5) + 1):
+        if number % i == 0:
+            return False
+    return True
+num = int(input("Enter a number: "))
+if is_prime(num):
+    print(f"{num} is a prime number.")
+else:
+    print(f"{num} is not a prime number.")
+
+
+
+#(TYPE CASTING)
+#program1
+string_number = input("Enter a number as a string: ")
+integer_number = int(string_number)
+print(f"The integer equivalent of the string is: {integer_number}")
+
+#program2
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+average = (num1 + num2 + num3) / 3
+print(f"The average of the three numbers is: {average}")
+
+
+#THANKYOU
